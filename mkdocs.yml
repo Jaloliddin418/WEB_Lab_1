@@ -1,0 +1,83 @@
+site_name: Time Manager API
+site_description: Отчёт по лабораторной работе - серверное приложение тайм-менеджера на FastAPI
+site_author: Andrew
+site_url: https://jaloliddin418.github.io/WEB_Lab_1/
+repo_url: https://github.com/Jaloliddin418/WEB_Lab_1
+repo_name: WEB_Lab_1
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Главная: index.md
+  - Задание: task.md
+  - Проектирование:
+      - Модель данных: data-model.md
+      - Структура проекта: structure.md
+  - Реализация:
+      - ORM-модели: models.md
+      - Pydantic-схемы: schemas.md
+      - Аутентификация и JWT: auth.md
+      - API-эндпоинты: api.md
+      - Миграции Alembic: migrations.md
+  - Запуск и демонстрация: run.md
+  - Вывод: conclusion.md
